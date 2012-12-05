@@ -7,7 +7,7 @@ using NUnit.Framework;
 namespace MarkMonitor.LinkCrawler.Data.Tests
 {
 	[TestFixture]
-	public class Class1
+	public class StoredLinkRepoTests
 	{
 		[Test]
 		public void can_store_a_valid_found_link()

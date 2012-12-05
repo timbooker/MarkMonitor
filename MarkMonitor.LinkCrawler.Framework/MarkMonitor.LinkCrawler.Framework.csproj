@@ -43,6 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IPageDataProvider.cs" />
+    <Compile Include="IPageScraper.cs" />
+    <Compile Include="PageDataProvider.cs" />
     <Compile Include="PageScraper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

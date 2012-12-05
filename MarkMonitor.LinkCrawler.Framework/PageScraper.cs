@@ -18,10 +18,17 @@ namespace MarkMonitor.LinkCrawler.Framework
 		public IEnumerable<string> GetLinksFor(string url)
 		{
 			var htmlDocument = new HtmlDocument();
-			htmlDocument.LoadHtml(_dataProvider.GetPageFor(url));
+		    var result = _dataProvider.GetPageFor(url);
 
-			return htmlDocument.DocumentNode.SelectNodes("//a[@href]")
-											.Select(x => x.GetAttributeValue("href", string.Empty));
+            if(!string.IsNullOrWhiteSpace(result))
+            {
+                htmlDocument.LoadHtml(result);
+
+                return htmlDocument.DocumentNode.SelectNodes("//a[@href]")
+                                                .Select(x => x.GetAttributeValue("href", string.Empty));
+            }
+
+            return new List<string>();
 		}
 	}
 }

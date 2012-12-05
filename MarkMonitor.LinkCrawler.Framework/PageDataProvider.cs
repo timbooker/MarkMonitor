@@ -1,3 +1,4 @@
+using System;
 using System.Net;
 
 namespace MarkMonitor.LinkCrawler.Framework
@@ -6,7 +7,15 @@ namespace MarkMonitor.LinkCrawler.Framework
 	{
 		public string GetPageFor(string url)
 		{
-			return new WebClient().DownloadString(url);
+            try
+            {
+                return new WebClient().DownloadString(url);
+            }
+            catch(Exception)
+            {
+                
+            }
+		    return string.Empty;
 		}
 	}
 }

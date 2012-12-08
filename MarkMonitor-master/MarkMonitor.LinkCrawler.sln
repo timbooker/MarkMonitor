@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkMonitor.LinkCrawler", "MarkMonitor.LinkCrawler\MarkMonitor.LinkCrawler.csproj", "{31141D08-39D2-4E91-ADDE-4C74B6015D9F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkMonitor.LinkCrawler.Data", "MarkMonitor.LinkCrawler.Data\MarkMonitor.LinkCrawler.Data.csproj", "{94205553-3ABC-4E69-B130-299769BEAD80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkMonitor.LinkCrawler.Data.Tests", "MarkMonitor.LinkCrawler.Data.Tests\MarkMonitor.LinkCrawler.Data.Tests.csproj", "{42146635-BB55-4CAD-BB07-5C4E4CDF436B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkMonitor.LinkCrawler.Framework", "MarkMonitor.LinkCrawler.Framework\MarkMonitor.LinkCrawler.Framework.csproj", "{21EC119C-62AA-49FD-B201-57022EF3D1FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkMonitor.LinkCrawler.Framework.Tests", "MarkMonitor.LinkCrawler.Framework.Tests\MarkMonitor.LinkCrawler.Framework.Tests.csproj", "{F110085C-1D17-45EC-8135-AEB306B4C53B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkMonitor.LinkCrawler.Web", "MarkMonitor.LinkCrawler.Web\MarkMonitor.LinkCrawler.Web.csproj", "{27EB6CA0-6DE1-4AD9-B247-B75B4A83A9E3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D255EEDD-6D76-4B40-96D1-890AC84EA102}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31141D08-39D2-4E91-ADDE-4C74B6015D9F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31141D08-39D2-4E91-ADDE-4C74B6015D9F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31141D08-39D2-4E91-ADDE-4C74B6015D9F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31141D08-39D2-4E91-ADDE-4C74B6015D9F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94205553-3ABC-4E69-B130-299769BEAD80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94205553-3ABC-4E69-B130-299769BEAD80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94205553-3ABC-4E69-B130-299769BEAD80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94205553-3ABC-4E69-B130-299769BEAD80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42146635-BB55-4CAD-BB07-5C4E4CDF436B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42146635-BB55-4CAD-BB07-5C4E4CDF436B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42146635-BB55-4CAD-BB07-5C4E4CDF436B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42146635-BB55-4CAD-BB07-5C4E4CDF436B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21EC119C-62AA-49FD-B201-57022EF3D1FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21EC119C-62AA-49FD-B201-57022EF3D1FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21EC119C-62AA-49FD-B201-57022EF3D1FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21EC119C-62AA-49FD-B201-57022EF3D1FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F110085C-1D17-45EC-8135-AEB306B4C53B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F110085C-1D17-45EC-8135-AEB306B4C53B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F110085C-1D17-45EC-8135-AEB306B4C53B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F110085C-1D17-45EC-8135-AEB306B4C53B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27EB6CA0-6DE1-4AD9-B247-B75B4A83A9E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27EB6CA0-6DE1-4AD9-B247-B75B4A83A9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27EB6CA0-6DE1-4AD9-B247-B75B4A83A9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27EB6CA0-6DE1-4AD9-B247-B75B4A83A9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,33 @@
+﻿@using MarkMonitor.LinkCrawler.Web.Models
+@model MarkMonitor.LinkCrawler.Web.Models.HomeModel
+@{
+	ViewBag.Title = "Eager Loaded";
+	Layout = "../Shared/_Layout.cshtml";
+}
+<h2>
+	Hyperlink Crawler
+</h2>
+@section Javascript
+{
+	<script type="text/javascript">
+		$(function () {
+			$("#browser").dynatree(
+						{
+							autoFocus: true,
+							initAjax: {
+								url: "@Url.Action("GetChildrenFor", "Home")",
+								data: { parentId: 0 }
+							},
+							onLazyRead: function (node) {
+								node.appendAjax({
+									url: "@Url.Action("GetChildrenFor", "Home")",
+									data: { parentId: node.data.key },
+								});
+							}
+						});
+		});
+	</script>
+}
+
+<div id="browser">
+</div>

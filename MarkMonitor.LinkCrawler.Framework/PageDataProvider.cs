@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Net;
 
 namespace MarkMonitor.LinkCrawler.Framework
@@ -11,9 +12,23 @@ namespace MarkMonitor.LinkCrawler.Framework
             {
                 return new WebClient().DownloadString(url);
             }
-            catch(Exception)
+            catch(Exception ex)
             {
-                
+				if (!File.Exists("C:\\errorsWithMM.txt"))
+				{
+					File.Create("C:\\errorsWithMM.txt");
+				}
+				try
+				{
+					using (var sw = File.AppendText("C:\\errorsWithMM.txt"))
+					{
+						sw.WriteLine(ex.Message);
+					}	
+				}
+				catch(Exception)
+				{
+					
+				}
             }
 		    return string.Empty;
 		}

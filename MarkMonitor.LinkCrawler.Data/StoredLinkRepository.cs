@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Simple.Data;
 
 namespace MarkMonitor.LinkCrawler.Data
@@ -22,6 +23,16 @@ namespace MarkMonitor.LinkCrawler.Data
 		public StoredLink Get(int id)
 		{
 			return Database.Default.StoredLink.Get(id);
+		}
+
+		public IEnumerable<StoredLink> GetAll()
+		{
+			return Database.Default.StoredLink.FindAll(Database.Default.StoredLink.Id > 0);
+		}
+
+		public IEnumerable<StoredLink> GetLinksForParentId(int id)
+		{
+			return Database.Default.StoredLink.FindAllByParentId(id);
 		}
 	}
 }

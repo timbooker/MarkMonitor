@@ -977,8 +977,13 @@ I think you should use an
 							.Return(SimpleTestData)
 							.IgnoreArguments();
 
+			var linkhelper = MockRepository.GenerateStub<ILinkHelper>();
+			linkhelper.Stub(x => x.ParseLink(string.Empty, string.Empty))
+				.Return(string.Empty)
+				.IgnoreArguments();
+
 			// act
-			var result = new PageScraper(pageDataProvider).GetLinksFor(string.Empty);
+			var result = new PageScraper(pageDataProvider, linkhelper).GetLinksFor(string.Empty);
 
 			// act 
 			Assert.That(result.Count(), Is.EqualTo(2));
@@ -993,8 +998,12 @@ I think you should use an
 							.Return(TestData)
 							.IgnoreArguments();
 
+			var linkhelper = MockRepository.GenerateStub<ILinkHelper>();
+			linkhelper.Stub(x => x.ParseLink(string.Empty, string.Empty))
+				.Return(string.Empty)
+				.IgnoreArguments();
 			// act
-			var result = new PageScraper(pageDataProvider).GetLinksFor(string.Empty);
+			var result = new PageScraper(pageDataProvider, linkhelper).GetLinksFor(string.Empty);
 
 			// act 
 			Assert.That(result.Count(), Is.EqualTo(82));

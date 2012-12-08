@@ -11,5 +11,7 @@ namespace MarkMonitor.LinkCrawler.Data
 		void Update(StoredLink link);
 		void Delete(int id);
 		StoredLink Get(int id);
+		IEnumerable<StoredLink> GetAll();
+		IEnumerable<StoredLink> GetLinksForParentId(int id);
 	}
 }

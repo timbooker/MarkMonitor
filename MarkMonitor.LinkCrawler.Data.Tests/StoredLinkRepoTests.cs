@@ -26,5 +26,19 @@ namespace MarkMonitor.LinkCrawler.Data.Tests
 			// assert
 			Assert.That(repository.Get(result), Is.Not.Null);
 		}
+
+		[Test]
+		public void can_getall_links()
+		{
+			// arrange
+			var repository = new StoredLinkRepository();
+
+			// act
+			var result = repository.GetAll();
+
+
+			// assert
+			Assert.That(result.Count(), Is.GreaterThan(0));
+		}
 	}
 }

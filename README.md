@@ -25,8 +25,8 @@ How To Use:
 ===========
 Code Review
 ===========
-*Provide a review of your code, including notes about any problems or weaknesses present in the solution,*
-*and describe what you would improve in future iterations (max 1 page):*
+__*Provide a review of your code, including notes about any problems or weaknesses present in the solution,*__
+__*and describe what you would improve in future iterations (max 1 page):*__
 
 By Project :
 ------------
@@ -52,7 +52,7 @@ To Improve :
 ===========
 Process Notes
 ===========
-_*Explain how you approached the development task, and describe the process of solving it (max 1 page):*_
+__*Explain how you approached the development task, and describe the process of solving it (max 1 page):*__
 
 Immediate thoughts on getting the application going were :
 * Create a simplistic idea of the data model, and how I would be able link found nodes back to the parent nodes.

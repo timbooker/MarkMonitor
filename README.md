@@ -16,8 +16,9 @@ HtmlAgilityPack (HTML Parsing)
 NUnit (Testing)
 RhinoMocks (Unit Testing)
 
------------------------------------------------------------
+===========
 Code Review
+===========
 Provide a review of your code, including notes about any problems or weaknesses present in the solution,
 and describe what you would improve in future iterations (max 1 page):
 
@@ -41,8 +42,9 @@ have found this session already, I would link the url back to the original id of
 of data replication - as well as allow for tree following to be linked back to real tree paths.
 
 
------------------------------------------------------------
+===========
 Process Notes
+===========
 Explain how you approached the development task, and describe the process of solving it (max 1 page):
 
 Immediate thoughts on getting the application going were :

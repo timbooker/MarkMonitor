@@ -13,8 +13,15 @@ namespace MarkMonitor.LinkCrawler.Framework
 			if (hrefValue.StartsWith("javascript"))
 				return string.Empty;
 
-			var parsedUrl = new Uri(new Uri(url), hrefValue);
-			return parsedUrl.AbsoluteUri;
+            try
+            {
+                var parsedUrl = new Uri(new Uri(url), hrefValue);
+                return parsedUrl.AbsoluteUri;   
+            }
+            catch(Exception)
+            {
+                return string.Empty;
+            }
 		}
 	}
 }

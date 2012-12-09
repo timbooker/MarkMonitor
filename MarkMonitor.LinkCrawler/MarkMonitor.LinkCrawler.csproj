@@ -73,6 +73,10 @@
       <Project>{21EC119C-62AA-49FD-B201-57022EF3D1FF}</Project>
       <Name>MarkMonitor.LinkCrawler.Framework</Name>
     </ProjectReference>
+    <ProjectReference Include="..\MarkMonitor.LinkCrawler.Service\MarkMonitor.LinkCrawler.Service.csproj">
+      <Project>{2D5F4184-5A7D-4449-AE93-262EC8418FC7}</Project>
+      <Name>MarkMonitor.LinkCrawler.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />

@@ -1,9 +1,10 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace MarkMonitor.LinkCrawler.Framework
 {
 	public interface IPageScraper
 	{
-		IEnumerable<string> GetLinksFor(string url);
+		Task<IEnumerable<string>> GetLinksFor(string url);
 	}
 }

@@ -8,7 +8,12 @@ namespace MarkMonitor.LinkCrawler.Web.Models
 	{
 		private readonly IStoredLinkRepository _storedLinkRepository;
 
-		public HomeModel(IStoredLinkRepository storedLinkRepository)
+		public HomeModel()
+		{
+		    
+		}
+        
+        public HomeModel(IStoredLinkRepository storedLinkRepository)
 		{
 			_storedLinkRepository = storedLinkRepository;
 		}
@@ -17,6 +22,9 @@ namespace MarkMonitor.LinkCrawler.Web.Models
 		{
 			return _storedLinkRepository.GetLinksForParentId(parentId);
 		}
+
+        public string Url { get; set; }
+        public bool IsSuccess { get; set; }
 
 		/// <summary>
 		/// Gets all links in the db into a structured set.

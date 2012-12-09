@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using NUnit.Framework;
 using Rhino.Mocks;
 
@@ -974,7 +975,7 @@ I think you should use an
 			// arrage
 			var pageDataProvider = MockRepository.GenerateStub<IPageDataProvider>();
 			pageDataProvider.Stub(x => x.GetPageFor(string.Empty))
-							.Return(SimpleTestData)
+							.Return(new Task<string>(() => SimpleTestData))
 							.IgnoreArguments();
 
 			var linkhelper = MockRepository.GenerateStub<ILinkHelper>();
@@ -986,7 +987,7 @@ I think you should use an
 			var result = new PageScraper(pageDataProvider, linkhelper).GetLinksFor(string.Empty);
 
 			// act 
-			Assert.That(result.Count(), Is.EqualTo(2));
+			Assert.That(result.Result.Count(), Is.EqualTo(2));
 		}
 
 		[Test]
@@ -995,7 +996,7 @@ I think you should use an
 			// arrage
 			var pageDataProvider = MockRepository.GenerateStub<IPageDataProvider>();
 			pageDataProvider.Stub(x => x.GetPageFor(string.Empty))
-							.Return(TestData)
+							.Return(new Task<string>(() => TestData))
 							.IgnoreArguments();
 
 			var linkhelper = MockRepository.GenerateStub<ILinkHelper>();
@@ -1006,7 +1007,7 @@ I think you should use an
 			var result = new PageScraper(pageDataProvider, linkhelper).GetLinksFor(string.Empty);
 
 			// act 
-			Assert.That(result.Count(), Is.EqualTo(82));
+			Assert.That(result.Result.Count(), Is.EqualTo(82));
 		}
 	}
 }

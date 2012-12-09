@@ -20,6 +20,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{D255EE
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkMonitor.LinkCrawler.Service", "MarkMonitor.LinkCrawler.Service\MarkMonitor.LinkCrawler.Service.csproj", "{2D5F4184-5A7D-4449-AE93-262EC8418FC7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{27EB6CA0-6DE1-4AD9-B247-B75B4A83A9E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27EB6CA0-6DE1-4AD9-B247-B75B4A83A9E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27EB6CA0-6DE1-4AD9-B247-B75B4A83A9E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D5F4184-5A7D-4449-AE93-262EC8418FC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D5F4184-5A7D-4449-AE93-262EC8418FC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D5F4184-5A7D-4449-AE93-262EC8418FC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D5F4184-5A7D-4449-AE93-262EC8418FC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

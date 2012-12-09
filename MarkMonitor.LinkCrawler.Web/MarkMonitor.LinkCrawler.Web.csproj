@@ -76,9 +76,10 @@
   <ItemGroup>
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\HomeModel.cs" />
+    <Compile Include="Models\InputUrlModel.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
     <Compile Include="DependencyResolution\SmDependencyResolver.cs" />
-    <Compile Include="Models\HomeModel.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -196,6 +197,10 @@
     <ProjectReference Include="..\MarkMonitor.LinkCrawler.Framework\MarkMonitor.LinkCrawler.Framework.csproj">
       <Project>{21EC119C-62AA-49FD-B201-57022EF3D1FF}</Project>
       <Name>MarkMonitor.LinkCrawler.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MarkMonitor.LinkCrawler.Service\MarkMonitor.LinkCrawler.Service.csproj">
+      <Project>{2D5F4184-5A7D-4449-AE93-262EC8418FC7}</Project>
+      <Name>MarkMonitor.LinkCrawler.Service</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -29,5 +29,16 @@
 	</script>
 }
 
+
+<div id="formFor">
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(x => x.Url)   
+    
+    <input type="submit" class="Complete"/>
+}
+
+</div>
 <div id="browser">
+
 </div>

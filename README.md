@@ -1,34 +1,35 @@
 MarkMonitor
 ===========
 How To Use: 
+-------------------------
 
-Prereqs : 
-VS 2010
-C# 4.0
-SQL Server 2008 R2
-NuGet
+*Prereqs :*
+* VS 2010
+* C# 4.0
+* SQL Server 2008 R2
+* NuGet
 
-Packages Used (should auto-generate from build in VS): 
-Simple.Data (ORM)
-structuremap (IoC)
-ASP.NET MVC 3 (Web Client)
-HtmlAgilityPack (HTML Parsing)
-NUnit (Testing)
-RhinoMocks (Unit Testing)
+*Packages Used (should auto-generate from build in VS):*
+* Simple.Data (ORM)
+* structuremap (IoC)
+* ASP.NET MVC 3 (Web Client)
+* HtmlAgilityPack (HTML Parsing)
+* NUnit (Testing)
+* RhinoMocks (Unit Testing)
 
 ===========
 Code Review
 ===========
-Provide a review of your code, including notes about any problems or weaknesses present in the solution,
-and describe what you would improve in future iterations (max 1 page):
+*Provide a review of your code, including notes about any problems or weaknesses present in the solution,*
+*and describe what you would improve in future iterations (max 1 page):*
 
-By Project : 
-MarkMonitor.LinkCrawler.Data - Contains Domain structure and Database Repository layer.
-MarkMonitor.LinkCrawler.Data.Tests - Tests for the above
-MarkMonitor.LinkCrawler.Framework - Contains framework level helpers for relevant parts of the crawler.
-MarkMonitor.LinkCrawler.Framework.Test - Tests for above
-MarkMonitor.LinkCrawler.Service - Invokation of crawl from a url service
-MarkMonitor.LinkCrawler.Web - Contains Web UI 
+*By Project :*
+* MarkMonitor.LinkCrawler.Data - Contains Domain structure and Database Repository layer.
+* MarkMonitor.LinkCrawler.Data.Tests - Tests for the above
+* MarkMonitor.LinkCrawler.Framework - Contains framework level helpers for relevant parts of the crawler.
+* MarkMonitor.LinkCrawler.Framework.Test - Tests for above
+* MarkMonitor.LinkCrawler.Service - Invokation of crawl from a url service
+* MarkMonitor.LinkCrawler.Web - Contains Web UI 
 
 As a whole, I am pleased with the solution for options for extension to be a stronger framework / web crawling application.
 
@@ -45,15 +46,15 @@ of data replication - as well as allow for tree following to be linked back to r
 ===========
 Process Notes
 ===========
-Explain how you approached the development task, and describe the process of solving it (max 1 page):
+*Explain how you approached the development task, and describe the process of solving it (max 1 page):*
 
-Immediate thoughts on getting the application going were :
-Create a simplistic idea of the data model, and how I would be able link found nodes back to the parent nodes.
-Usage of TPL for easy threadpool management.
-Use Simple.Data as my micro ORM of choice - as it is very easy to set up (dynamic implicit casting to model), and lightweight.
-IoC - StructureMap to be used - again due to simple set up
-Use Html.AgilityPack package to parse HTML pages downloaded
-Create simple recursive algorithm not using any threading to download, parse and save links from a web page structure.
+*Immediate thoughts on getting the application going were :*
+* Create a simplistic idea of the data model, and how I would be able link found nodes back to the parent nodes.
+* Usage of TPL for easy threadpool management.
+* Use Simple.Data as my micro ORM of choice - as it is very easy to set up (dynamic implicit casting to model), and lightweight.
+* IoC - StructureMap to be used - again due to simple set up
+* Use Html.AgilityPack package to parse HTML pages downloaded
+* Create simple recursive algorithm not using any threading to download, parse and save links from a web page structure.
 
 Having implemented a simple version of this, build it up to a more formal multiple tier style project to allow for movement 
 away from the Console app easily.

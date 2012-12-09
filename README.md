@@ -19,8 +19,13 @@ How To Use:
 * NUnit (Testing)
 * RhinoMocks (Unit Testing)
 
-
-
+1. Run SQL in SQL.sql.
+2. Configurate Web.Config / App.Configs to use the correct connection string for your application (Default connection string may work fine)
+3. To test the app is working, run the tests + try to run the console application.
+4. Put a few fully qualified urls into the console window, and let it run for a while. 
+5. To view the resultant data, and add more - just set the web app to be the starting application and press f5.
+6. Put any urls into the text box, and press the "submit" button. 
+7. If you re-load the page, you will be able to see the items being added to the tree structure as the data is being gathered in the backgroud.
 
 ===========
 Code Review

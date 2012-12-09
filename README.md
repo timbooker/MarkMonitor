@@ -19,6 +19,7 @@ How To Use:
 * NUnit (Testing)
 * RhinoMocks (Unit Testing)
 
+__Running the application__
 1. Run SQL in SQL.sql.
 2. Configurate Web.Config / App.Configs to use the correct connection string for your application (Default connection string may work fine)
 3. To test the app is working, run the tests + try to run the console application.

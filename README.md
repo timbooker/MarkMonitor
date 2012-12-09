@@ -1,5 +1,7 @@
 MarkMonitor
 ===========
+
+
 How To Use: 
 -----------
 
@@ -16,6 +18,9 @@ How To Use:
 * HtmlAgilityPack (HTML Parsing)
 * NUnit (Testing)
 * RhinoMocks (Unit Testing)
+
+
+
 
 ===========
 Code Review
@@ -41,12 +46,15 @@ To Improve :
 * I would improve the quality of actual stored data by rather than ending the node (url path in this case when I hit a node I have found this session already, I would link the url back to the original id of that entry. This would reduce huge amounts of data replication - as well as allow for tree following to be linked back to real tree paths.
 
 
+
+
+
 ===========
 Process Notes
 ===========
-*Explain how you approached the development task, and describe the process of solving it (max 1 page):*
+_*Explain how you approached the development task, and describe the process of solving it (max 1 page):*_
 
-*Immediate thoughts on getting the application going were :*
+Immediate thoughts on getting the application going were :
 * Create a simplistic idea of the data model, and how I would be able link found nodes back to the parent nodes.
 * Usage of TPL for easy threadpool management.
 * Use Simple.Data as my micro ORM of choice - as it is very easy to set up (dynamic implicit casting to model), and lightweight.

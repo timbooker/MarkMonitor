@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -31,7 +31,13 @@ namespace MarkMonitor.LinkCrawler.Data.Tests
 		public void can_getall_links()
 		{
 			// arrange
-			var repository = new StoredLinkRepository();
+			var repository = new StoredLinkRepository(); 
+			var linkToStore = new StoredLink()
+			{
+				Value = "http://google.com",
+			};
+			
+			repository.Save(linkToStore);
 
 			// act
 			var result = repository.GetAll();

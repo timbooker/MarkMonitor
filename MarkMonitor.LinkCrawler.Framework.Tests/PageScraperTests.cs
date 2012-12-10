@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -975,12 +975,12 @@ I think you should use an
 			// arrage
 			var pageDataProvider = MockRepository.GenerateStub<IPageDataProvider>();
 			pageDataProvider.Stub(x => x.GetPageFor(string.Empty))
-							.Return(new Task<string>(() => SimpleTestData))
+							.Return(Task.Factory.StartNew(() => SimpleTestData))
 							.IgnoreArguments();
 
 			var linkhelper = MockRepository.GenerateStub<ILinkHelper>();
 			linkhelper.Stub(x => x.ParseLink(string.Empty, string.Empty))
-				.Return(string.Empty)
+				.Return("http://google.com")
 				.IgnoreArguments();
 
 			// act
@@ -996,12 +996,12 @@ I think you should use an
 			// arrage
 			var pageDataProvider = MockRepository.GenerateStub<IPageDataProvider>();
 			pageDataProvider.Stub(x => x.GetPageFor(string.Empty))
-							.Return(new Task<string>(() => TestData))
+							.Return(Task.Factory.StartNew(() => TestData))
 							.IgnoreArguments();
 
 			var linkhelper = MockRepository.GenerateStub<ILinkHelper>();
 			linkhelper.Stub(x => x.ParseLink(string.Empty, string.Empty))
-				.Return(string.Empty)
+				.Return("http://google.com")
 				.IgnoreArguments();
 			// act
 			var result = new PageScraper(pageDataProvider, linkhelper).GetLinksFor(string.Empty);
